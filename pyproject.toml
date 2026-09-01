@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "garmin-scraper"
+version = "0.1.0"
+description = "Export a public Garmin Connect profile's activity history to JSON or Excel."
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [{ name = "Gejza Jenča", email = "gejza.jenca@gmail.com" }]
+keywords = ["garmin", "garmin-connect", "scraper", "playwright", "activities"]
+dependencies = [
+    "playwright>=1.44",
+    "openpyxl>=3.1",
+]
+
+[project.scripts]
+garmin-scraper = "garmin_scraper:main"
+
+[project.urls]
+Repository = "https://github.com/gejza/garmin_scraper"
+
+[tool.setuptools]
+py-modules = ["garmin_scraper"]
